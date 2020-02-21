@@ -39,7 +39,7 @@
               <a class="nav-link" href="#story">Our Story</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#aboutcopd">About COPD</a>
+              <a class="scroll nav-link" href="#aboutcopd">About COPD</a>
             </li>
             <li class="nav-item cta">
               <a class="btn btn-outline-primary text-uppercase" href="index.html#movement">Demand More</a>
@@ -128,6 +128,33 @@
     <script type="text/javascript" src="assets/scripts/video.js"></script>
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/739b5ecf7f.js" crossorigin="anonymous"></script>
+    <!-- SmoothScroll JS -->
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $(".scroll").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+    </script><!-- smooth scrolling -->
     <script>
       $(document).scroll(function () {
         var y = $(this).scrollTop();
