@@ -116,6 +116,20 @@
       </div>
     </section>
 
+    <footer class="py-3 bg-white">
+      <div class="container">
+        <div class="row d-flex align-items-center ">
+          <div class="col-12 col-sm-6">
+            <img src="assets/images/logo.svg" width="80px;">
+          </div>
+          <div class="col-12 col-sm-6 text-right">
+            <a class="text-uppercase text-dark" href="" target="_blank">Privacy Policy</a><span class="px-2">|</span>
+            <a class="text-uppercase text-dark" href="" target="_blank">Follow Us</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <!-- jQuery first, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -128,33 +142,6 @@
     <script type="text/javascript" src="assets/scripts/video.js"></script>
     <!-- Font Awesome JS -->
     <script src="https://kit.fontawesome.com/739b5ecf7f.js" crossorigin="anonymous"></script>
-    <!-- SmoothScroll JS -->
-    <script>
-      $(document).ready(function(){
-        // Add smooth scrolling to all links
-        $(".scroll").on('click', function(event) {
-
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-              scrollTop: $(hash).offset().top
-            }, 800, function(){
-
-              // Add hash (#) to URL when done scrolling (default click behavior)
-              window.location.hash = hash;
-            });
-          } // End if
-        });
-      });
-    </script><!-- smooth scrolling -->
     <script>
       $(document).scroll(function () {
         var y = $(this).scrollTop();
